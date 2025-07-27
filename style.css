@@ -1,0 +1,331 @@
+/* 
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+
+.main_container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: dodgerblue;
+  padding: 10px;
+
+}
+
+.profile{
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.name-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    
+}
+
+.information{
+    margin-right: 50px;
+}
+
+.bio{
+    grid-column: 2 / span 3;
+    display: flex;
+    padding: 50%;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background-color: black;
+    color: azure;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* common style */
+
+img {
+    width: 100%;
+}
+
+
+/* layout--> the chape of the project resume */
+
+.main_container {
+    display: grid;
+    max-width: 1000px;
+    width: 90%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    background-color: #2f2f2f
+
+}
+
+/*  For the smaller device*/
+
+@media only screen and (max-width: 800px) {
+    .main_container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+
+.my_profile {
+    grid-column: 1 / -1;
+
+
+}
+
+/* Groupe profile*/
+
+/* I use flexbox herer*/
+.my_profile_container {
+    display: flex;
+    gap: 16px;
+    margin-right: 50px;
+}
+
+.profile-image {
+    max-width: 300px;
+    margin-left: 1rem;
+
+}
+
+.profile-image img {
+    border-radius: 0;
+    max-width: 120px;
+    height: auto;
+
+}
+
+.ptitle {
+    color: rgb(0, 145, 255)
+}
+
+.information {
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+/* A revoir*/
+.biography {
+    grid-column: 1 / -1;
+    margin-left: 1rem;
+    padding: 1rem 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: white;
+    text-align: justify;
+    max-width: 100%;
+    padding-right: 2rem;
+    border-bottom: #570e0e74;
+
+}
+
+/*  Section 2 A revoir*/
+
+
+/* Colonne gauche */
+.section2 {
+    flex: 0 0 66%;
+    background-color: #83818170;
+    padding: 1rem;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* EMPLOYMENT bloc */
+.Employment {
+    background-color: #3498db;
+    padding: 8px;
+    border-radius: 3px 0 0 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+
+.Employment::before {
+    content: "▼";
+    color: white;
+    font-size: 12px;
+}
+
+/* Job entries */
+.job-entry {
+    margin-top: 1rem;
+    background-color: #2f2f2f;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    color: white;
+}
+
+.job-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.job-icon {
+    color: #3498db;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.job-title {
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.job-date {
+    color: #aaa;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.job-subtitle {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin: 0.5rem 0 0.3rem 1.5rem;
+}
+
+.job-description {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-left: 1.5rem;
+    line-height: 1.4;
+    border-bottom: dotted 0.5px;
+}
+
+/* Colonne droite */
+.section3 {
+    flex: 0 0 34%;
+    padding: 1rem;
+    color: white;
+}
+
+.section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Progression */
+.skill-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background-color: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress {
+    height: 100%;
+    border-radius: 20px;
+    background-color: #4CAF50;
+    text-align: right;
+    color: white;
+    line-height: 20px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+
+/*List color*/
+.colored-list li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    /* change la couleur ici */
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+li {
+    list-style: none;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    width: 100px;
+    /* largeur fixe pour l’alignement */
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.filled {
+    background-color: #4CAF50;
+}
+
+.empty {
+    background-color: #aaa;
+}
